@@ -21,6 +21,7 @@ namespace DatabaseClassLibrary.Database
 
         public async Task<TEntity> Insert(TEntity item)
         {
+            this.DbSetT.Attach(item);
             this.DbSetT.Add(item);
             await this.SaveChangesAsync();
             return item;
@@ -40,6 +41,7 @@ namespace DatabaseClassLibrary.Database
         {
             await Task.Factory.StartNew(() =>
             {
+                this.DbSetT.Attach(item);
                 this.Entry<TEntity>(item).State = EntityState.Modified;
             });
             await this.SaveChangesAsync();
@@ -61,7 +63,9 @@ namespace DatabaseClassLibrary.Database
 
         public async Task<TEntity> Get(Int32 id)
         {
-            return await this.DbSetT.FindAsync(id) as TEntity;
+            TEntity item = await this.DbSetT.FindAsync(id) as TEntity;
+            this.DbSetT.Attach(item);
+            return item;
         }
 
         public async Task<IEnumerable<TEntity>> Get()

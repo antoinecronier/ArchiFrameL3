@@ -64,8 +64,9 @@ namespace WpfApplication3
                     }
                 }
             }
-
-            foreach (var item in userRoles)
+            this.userCreate.Roles = userRoles;
+            await userManager.Insert(this.userCreate);
+            /*foreach (var item in userRoles)
             {
                 Role role = await this.roleManager.Get(item.RoleId);
                 this.userCreate.Roles.Add(role);
@@ -80,7 +81,11 @@ namespace WpfApplication3
 
             userManager.DbSetT.Add(this.userCreate);
 
-            userManager.SaveChanges();
+            userManager.SaveChanges();*/
+
+            UserCreateWindow userCreate = new UserCreateWindow();
+            userCreate.Show();
+            this.Close();
         }
 
         private async void LoadRoles()
