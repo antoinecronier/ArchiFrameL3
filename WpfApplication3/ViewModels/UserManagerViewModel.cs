@@ -2,25 +2,19 @@
 using DatabaseClassLibrary.Database;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WpfApplication3.Views;
 
-namespace WpfApplication3
+namespace WpfApplication3.ViewModels
 {
-    /// <summary>
-    /// Logique d'interaction pour UserCreate.xaml
-    /// </summary>
-    public partial class UserCreateWindow : Window
+    public class UserManagerViewModel
     {
+        private UserManagerView userManagerView;
         private User userCreate;
 
         public User UserCreate
@@ -32,19 +26,44 @@ namespace WpfApplication3
         MySQLManager<Role> roleManager = new MySQLManager<Role>(DataConnectionResource.LOCALMYSQL);
         MySQLManager<User> userManager = new MySQLManager<User>(DataConnectionResource.LOCALMYSQL);
         List<Role> roles;
-        public UserCreateWindow()
+        ObservableCollection<User> userCollection;
+
+        public UserManagerViewModel()
         {
-            InitializeComponent();
+            this.userManagerView = new UserManagerView();
+            this.userManagerView.DataContext = this;
+
+            Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive).Content = this.userManagerView;
+
             this.userCreate = new User();
-            this.DataContext = this;
+            this.userCollection = new ObservableCollection<User>();
+
+            this.userManagerView.itemsList.ItemsSource = this.userCollection;
+
             LoadRoles();
-            this.btnValidate.Click += BtnValidate_Click;
+            LoadUsers();
+
+            this.userManagerView.btnValidate.Click += BtnValidate_Click;
+            this.userManagerView.btnLogout.Click += BtnLogout_Click;
+        }
+
+        private async void LoadUsers()
+        {
+            foreach (var item in (await userManager.Get()).ToList())
+            {
+                this.userCollection.Add(item);
+            }
+        }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            LoginViewModel viewModel = new LoginViewModel();
         }
 
         private async void BtnValidate_Click(object sender, RoutedEventArgs e)
         {
             List<Role> userRoles = new List<Role>();
-            foreach (object childStackPanel in this.stackpanelRoles.Children)
+            foreach (object childStackPanel in this.userManagerView.stackpanelRoles.Children)
             {
                 if (childStackPanel is StackPanel)
                 {
@@ -54,7 +73,7 @@ namespace WpfApplication3
                         {
                             if ((child as CheckBox).IsChecked == true)
                             {
-                                Role role = roles.FirstOrDefault(x => x.Name == (child as CheckBox).Name.Replace("checkbox",""));
+                                Role role = roles.FirstOrDefault(x => x.Name == (child as CheckBox).Name.Replace("checkbox", ""));
                                 if (role != null)
                                 {
                                     userRoles.Add(role);
@@ -67,9 +86,7 @@ namespace WpfApplication3
             this.userCreate.Roles = userRoles;
             await userManager.Insert(this.userCreate);
 
-            UserCreateWindow userCreate = new UserCreateWindow();
-            userCreate.Show();
-            this.Close();
+            UserManagerViewModel viewModel = new UserManagerViewModel();
         }
 
         private async void LoadRoles()
@@ -85,7 +102,7 @@ namespace WpfApplication3
                 CheckBox checkbox = new CheckBox();
                 checkbox.Name = "checkbox" + item.Name;
                 stp.Children.Add(checkbox);
-                this.stackpanelRoles.Children.Add(stp);
+                this.userManagerView.stackpanelRoles.Children.Add(stp);
             }
         }
     }

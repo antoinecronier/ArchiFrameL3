@@ -10,16 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApplication3.ViewModels;
 
-namespace WpfApplication3
+namespace WpfApplication3.Views
 {
     /// <summary>
-    /// Logique d'interaction pour WindowData.xaml
+    /// Logique d'interaction pour LoginView.xaml
     /// </summary>
-    public partial class WindowData : Window
+    public partial class LoginView : Page
     {
-        public WindowData()
+        public LoginView()
         {
             InitializeComponent();
         }

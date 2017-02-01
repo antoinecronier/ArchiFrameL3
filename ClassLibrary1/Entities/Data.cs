@@ -30,5 +30,14 @@ namespace ClassLibrary1.Entities
                 OnPropertyChanged("JsonData");
             }
         }
+
+        private User user;
+
+        public User User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
     }
 }

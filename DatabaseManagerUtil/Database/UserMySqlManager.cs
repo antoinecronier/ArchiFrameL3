@@ -32,5 +32,12 @@ namespace DatabaseManagerUtil.Database
             
             return user;
         }
+
+        public User GetDatas(User user)
+        {
+            this.DbSetT.Attach(user);
+            this.Entry(user).Collection(x => x.Datas).Load();
+            return user;
+        }
     }
 }

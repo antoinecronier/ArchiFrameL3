@@ -69,6 +69,14 @@ namespace ClassLibrary1.Entities
             set { roles = value; }
         }
 
+        private ICollection<Data> datas;
+
+        public ICollection<Data> Datas
+        {
+            get { return datas; }
+            set { datas = value; }
+        }
+
         public User()
         {
             this.roles = new HashSet<Role>();

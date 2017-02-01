@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\WpfApplication3\App.xaml
-3-1448677427
+31656485734
 
-11715613158
-19-273851423
-MainWindow.xaml;UserCreateWindow.xaml;WindowData.xaml;
+14-1454532734
+201396785235
+Views\DataInsertView.xaml;Views\LoginView.xaml;Views\UserManagerView.xaml;
 
 True
 

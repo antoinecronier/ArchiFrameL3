@@ -1,0 +1,76 @@
+﻿<Page x:Class="WpfApplication3.Views.UserManagerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication3.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="UserManagerView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="1" Grid.Row="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Firstname"/>
+                    <TextBox x:Name="txtBlockFirstname" MaxWidth = "80" MinWidth = "80" Text="{Binding UserCreate.Firstname}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Lastname"/>
+                    <TextBox x:Name="txtBlockLastname" MaxWidth = "80" MinWidth = "80" Text="{Binding UserCreate.Lastname}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Login"/>
+                    <TextBox x:Name="txtBlockLogin" MaxWidth = "80" MinWidth = "80" Text="{Binding UserCreate.Login}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Password"/>
+                    <TextBox x:Name="txtBlockPassword" MaxWidth = "80" MinWidth = "80" Text="{Binding UserCreate.Password}"/>
+                </StackPanel>
+                <Label Content="Roles"/>
+                <StackPanel x:Name="stackpanelRoles">
+                </StackPanel>
+                <Button x:Name="btnValidate" Content="Validate"/>
+                <Button x:Name="btnLogout" Content="Logout"/>
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="2" Grid.Row="0" Grid.RowSpan="3">
+            <ListView x:Name="itemsList" Margin="0"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Lastname"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding Lastname}" VerticalAlignment="Top" Padding="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Firstname"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding Firstname}" VerticalAlignment="Top" Padding="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Login"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding Login}" VerticalAlignment="Top" Padding="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Password"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding Password}" VerticalAlignment="Top" Padding="10,0,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Page>
