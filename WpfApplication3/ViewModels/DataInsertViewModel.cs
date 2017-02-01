@@ -15,17 +15,24 @@ namespace WpfApplication3.ViewModels
 {
     public class DataInsertViewModel
     {
-        private User LoggedUser { get; set; }
+        private User loggedUser;
+
+        public User LoggedUser
+        {
+            get { return loggedUser; }
+            set { loggedUser = value; }
+        }
+
         private DataInsertView dataInsertView;
         private ObservableCollection<Data> dataCollection;
 
-        public DataInsertViewModel(User loggedUser)
+        public DataInsertViewModel(User loggedUserItem)
         {
             this.dataInsertView = new DataInsertView();
             this.dataInsertView.btnValidate.Click += BtnValidate_Click;
             this.dataInsertView.btnlogout.Click += Btnlogout_Click;
 
-            LoggedUser = loggedUser;
+            this.LoggedUser = loggedUserItem;
             dataCollection = new ObservableCollection<Data>();
 
             this.dataInsertView.DataContext = this;
@@ -68,7 +75,9 @@ namespace WpfApplication3.ViewModels
                 data.User = currentUser;
                 await dataManager.Insert(data);
 
-                DataInsertViewModel viewModel = new DataInsertViewModel(currentUser);
+                MessageBox.Show("Data Inserted");
+
+                DataInsertViewModel viewModel = new DataInsertViewModel(currentUser);   
             }
             catch (Exception ex)
             {

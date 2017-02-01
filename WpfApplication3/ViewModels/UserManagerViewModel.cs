@@ -85,7 +85,7 @@ namespace WpfApplication3.ViewModels
             }
             this.userCreate.Roles = userRoles;
             await userManager.Insert(this.userCreate);
-
+            MessageBox.Show("Data Inserted");
             UserManagerViewModel viewModel = new UserManagerViewModel();
         }
 
