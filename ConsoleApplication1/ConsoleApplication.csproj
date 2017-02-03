@@ -33,7 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,16 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataManager\DataManager.cs" />
+    <Compile Include="DataManager\UserLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ProjectClasses.csproj">
       <Project>{ec1c7f1d-e419-4daf-b6be-fab6f237062a}</Project>
       <Name>ProjectClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConsoleUtil\ConsoleUtil.csproj">
+      <Project>{5A40CCA3-96C9-49A9-B3B3-584686E57E03}</Project>
+      <Name>ConsoleUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseClassLibrary\DatabaseClassLibrary.csproj">
+      <Project>{EA7A0F34-909F-45E8-9CAA-B80BDE5B7075}</Project>
+      <Name>DatabaseClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseManagerUtil\DatabaseManagerUtil.csproj">
+      <Project>{EE8E55DB-1686-4BBD-93FB-538CCC2C4E85}</Project>
+      <Name>DatabaseManagerUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonObjectManipulator\JsonObjectManipulator.csproj">
+      <Project>{40F98797-9934-4E65-AD7A-F507B45AFF5C}</Project>
+      <Name>JsonObjectManipulator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

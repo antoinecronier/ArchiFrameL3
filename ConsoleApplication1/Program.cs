@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseManagerUtil.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            UserLogger.Instance.ConnectUser();
+
+            Console.ReadLine();
         }
     }
 }

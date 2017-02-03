@@ -1,5 +1,0 @@
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjects\bin\Debug\JsonObjects.dll
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjects\bin\Debug\JsonObjects.pdb
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjects\obj\Debug\JsonObjects.csprojResolveAssemblyReference.cache
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjects\obj\Debug\JsonObjects.dll
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjects\obj\Debug\JsonObjects.pdb

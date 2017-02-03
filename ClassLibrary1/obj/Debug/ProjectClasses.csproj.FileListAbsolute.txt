@@ -1,4 +1,5 @@
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-c:\users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\obj\Debug\ProjectClasses.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

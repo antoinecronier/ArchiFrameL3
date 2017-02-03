@@ -1,0 +1,5 @@
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ConsoleUtil\bin\Debug\ConsoleUtil.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ConsoleUtil\bin\Debug\ConsoleUtil.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ConsoleUtil\obj\Debug\ConsoleUtil.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ConsoleUtil\obj\Debug\ConsoleUtil.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\ConsoleUtil\obj\Debug\ConsoleUtil.pdb

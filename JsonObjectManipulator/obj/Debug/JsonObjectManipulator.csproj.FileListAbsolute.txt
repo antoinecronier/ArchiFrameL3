@@ -1,0 +1,7 @@
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\bin\Debug\JsonObjectManipulator.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\bin\Debug\JsonObjectManipulator.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\obj\Debug\JsonObjectManipulator.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\obj\Debug\JsonObjectManipulator.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\JsonObjectManipulator\obj\Debug\JsonObjectManipulator.pdb
