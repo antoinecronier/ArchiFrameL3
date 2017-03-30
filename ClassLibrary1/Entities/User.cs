@@ -80,6 +80,7 @@ namespace ClassLibrary1.Entities
         public User()
         {
             this.roles = new HashSet<Role>();
+            this.datas = new HashSet<Data>();
         }
     }
 }

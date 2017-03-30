@@ -212,6 +212,7 @@
     <Content Include="Views\Data\CreateAdvance.cshtml" />
     <Content Include="Views\Users\CreateAdvance.cshtml" />
     <Content Include="Views\Users\DetailsAdvance.cshtml" />
+    <Content Include="Views\Users\EditAdvance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -39,5 +39,9 @@ namespace ClassLibrary1.Entities
             set { user = value; }
         }
 
+        public Data()
+        {
+            //this.user = new User();//TODO delete
+        }
     }
 }

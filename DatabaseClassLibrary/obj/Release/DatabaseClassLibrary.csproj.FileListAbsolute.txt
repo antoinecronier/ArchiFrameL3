@@ -1,0 +1,14 @@
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\DatabaseClassLibrary.dll.config
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\DatabaseClassLibrary.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\DatabaseClassLibrary.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\ClassLibrary1.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\EntityFramework.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\MySql.Data.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\mysql.data.entity.EF6.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\ClassLibrary1.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\EntityFramework.xml
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\obj\Release\DatabaseClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\obj\Release\DatabaseClassLibrary.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseClassLibrary\obj\Release\DatabaseClassLibrary.pdb

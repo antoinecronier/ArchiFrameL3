@@ -59,8 +59,26 @@
 
         </dl>
     }
+
+    <h4>Datas</h4>
+    <hr />
+    @foreach (var item in Model.Datas)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => item.JsonData)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.JsonData)
+            </dd>
+            <dd>
+                @Html.ActionLink("Edit Data Advance", "EditAdvance", "Data", new { id = item.Id })
+            </dd>
+        </dl>
+    }
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Edit Advance", "EditAdvance", new { id = Model.UserId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

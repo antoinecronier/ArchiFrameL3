@@ -54,7 +54,7 @@
                     @foreach (var item in ViewBag.Roles)
                     {
                         @Html.Label((String)item.Name, htmlAttributes: new { @class = "control-label col-md-2" });
-                        @Html.CheckBox("ids", htmlAttributes: new { @id = "ids", @value = item.RoleId });
+                        <input type="checkbox" name="ids[]" value="@item.RoleId" />
                     }
                 </div>
             </div>

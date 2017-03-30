@@ -1,0 +1,15 @@
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\DatabaseManagerUtil.dll.config
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\DatabaseManagerUtil.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\DatabaseManagerUtil.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\ClassLibrary1.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\DatabaseClassLibrary.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\EntityFramework.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\ClassLibrary1.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\DatabaseClassLibrary.pdb
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\EntityFramework.xml
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\obj\Release\DatabaseManagerUtil.csprojResolveAssemblyReference.cache
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\obj\Release\DatabaseManagerUtil.dll
+C:\Users\tactfactory\documents\visual studio 2015\Projects\WpfApplication3\DatabaseManagerUtil\obj\Release\DatabaseManagerUtil.pdb

@@ -11,10 +11,12 @@ namespace DatabaseClassLibrary.Database
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class MySQLManager<TEntity> : DbContext where TEntity : class
     {
+        protected MySQLFullDB fullDB;
+
         public MySQLManager(DataConnectionResource dataConnectionResource) 
             : base(EnumString.GetStringValue(dataConnectionResource))
         {
-            MySQLFullDB initDBIfNotExist = new MySQLFullDB(dataConnectionResource);
+            fullDB = new MySQLFullDB(dataConnectionResource);
         }
 
         public DbSet<TEntity> DbSetT { get; set; }
@@ -42,9 +44,10 @@ namespace DatabaseClassLibrary.Database
             await Task.Factory.StartNew(() =>
             {
                 this.DbSetT.Attach(item);
+                this.Entry<TEntity>(item).Reload();
                 this.Entry<TEntity>(item).State = EntityState.Modified;
+                this.SaveChanges();
             });
-            await this.SaveChangesAsync();
             return item;
         }
 
