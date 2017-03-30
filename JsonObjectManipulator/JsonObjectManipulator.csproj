@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="JsonCompletItem.cs" />
     <Compile Include="JsonDataExtractor.cs" />
+    <Compile Include="JsonDisplayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

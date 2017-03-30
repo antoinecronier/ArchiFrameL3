@@ -17,7 +17,6 @@ namespace ConsoleApplication1
 
         private UserMySqlManager userManager;
         private MySQLManager<Data> dataManager;
-        private JsonCompletItem jsonCompletItem = new JsonCompletItem();
 
         private DataManager()
         {
@@ -70,15 +69,14 @@ namespace ConsoleApplication1
 
         private void PrintModification(Data data)
         {
-            Object meta = JsonDataExtractor.GetFieldsAndData(data.JsonData);
-            jsonCompletItem.Item = meta;
+            Object meta = JsonDataExtractor.Instance("json1").Init(data.JsonData).BaseJson;
             ConsoleManager.Instance.LoopSinceExit("exit", () =>
             {
                 PrintModificationMenu(data, meta as Dictionary<String, Object>);
             });
         }
 
-        private async void PrintModificationMenu(Data data, List<Dictionary<String, Object>> meta)
+        private void PrintModificationMenu(Data data, List<Dictionary<String, Object>> meta)
         {
             Console.WriteLine("Select item by is position :");
             int i = 0;
@@ -92,7 +90,7 @@ namespace ConsoleApplication1
             Int32 selectedItem;
             Int32.TryParse(Console.ReadLine(), out selectedItem);
             String choosed = ConsoleManager.Instance.LoopSinceChoseOrExit(keys, "exit");
-            Object dicoItem = JsonDataExtractor.GetSubListObjectById(meta, choosed);
+            Object dicoItem = JsonDataExtractor.Instance("json1").GetSubListObjectById(meta, choosed);
 
             if (dicoItem is Dictionary<String, Object>)
             {
@@ -116,7 +114,7 @@ namespace ConsoleApplication1
             Console.WriteLine("2 : add field");
             Console.WriteLine("3 : update field");
             Console.WriteLine("4 : remove current object");
-            if (JsonDataExtractor.HaveSubObject(meta))
+            if (JsonDataExtractor.Instance("json1").HaveSubObject(meta))
             {
                 Console.WriteLine("5 : navigate to object");
             }
@@ -133,7 +131,7 @@ namespace ConsoleApplication1
             {
                 case 1:
                     meta = FieldRemover(meta);
-                    String metaJson = JsonDataExtractor.SendToJson(meta);
+                    String metaJson = JsonDataExtractor.Instance("json1").SendToJson(meta);
                     break;
                 case 2:
                     meta = FieldAdder(meta);
@@ -141,14 +139,14 @@ namespace ConsoleApplication1
                 case 3:
                     break;
                 case 5:
-                    List<String> keys = JsonDataExtractor.GetSubObjectsKeys(meta);
+                    List<String> keys = JsonDataExtractor.Instance("json1").GetSubObjectsKeys(meta);
                     Console.WriteLine("Avaibles keys :");
                     foreach (var item in keys)
                     {
                         Console.WriteLine("- " + item);
                     }
                     String choosed = ConsoleManager.Instance.LoopSinceChoseOrExit(keys, "exit");
-                    Object dicoItem = JsonDataExtractor.GetSubObjectByKey(meta, choosed);
+                    Object dicoItem = JsonDataExtractor.Instance("json1").GetSubObjectByKey(meta, choosed);
                     if (dicoItem is Dictionary<String, Object>)
                     {
                         PrintModificationMenu(data, dicoItem as Dictionary<String, Object>);
@@ -160,7 +158,7 @@ namespace ConsoleApplication1
                     
                     break;
                 case 9:
-                    String result = JsonDataExtractor.SendToJson(meta);
+                    String result = JsonDataExtractor.Instance("json1").SendBaseJsonToString();
                     if (result != null)
                     {
                         data.JsonData = result;
@@ -195,7 +193,7 @@ namespace ConsoleApplication1
                     Console.WriteLine("New value for key " + key + " :");
                     String value = ConsoleManager.Instance.LinePromptSaver();
 
-                    meta.Add(key, value);
+                    meta = JsonDataExtractor.Instance("json1").FieldAdder(key, value);
                 });
             return meta;
         }
@@ -208,8 +206,8 @@ namespace ConsoleApplication1
                 Console.WriteLine(item.Key);
             }
             String keyToRemove = ConsoleManager.Instance.LoopSinceChoseOrExit(meta.Keys, "exit");
-            meta.Remove(keyToRemove);
-            return meta;
+
+            return JsonDataExtractor.Instance("json1").FieldRemover(keyToRemove);
         }
 
         public void SelectDataById(ICollection<Data> datas)

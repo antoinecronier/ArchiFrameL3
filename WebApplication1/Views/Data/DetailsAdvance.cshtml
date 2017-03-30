@@ -1,0 +1,81 @@
+﻿@model ClassLibrary1.Entities.Data
+
+@{
+    ViewBag.Title = "DetailsAdvance";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Data</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JsonData)
+        </dt>
+
+        <dd>
+            @{ 
+                var items = Model.JsonData.Split(',');
+            }
+            @foreach (var item in items)
+            {
+                if (item.Equals("<br>"))
+                {
+                    @Html.Raw("</br>");
+                }
+                else if (item.Equals("<tab>"))
+                {
+                    @Html.Raw("    ");
+                }
+                else
+                {
+                    @Html.Raw(item);
+                }
+            }
+        </dd>
+
+    </dl>
+    <h4>
+        @Html.DisplayNameFor(model => model.User)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Password)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("EditAdvance", "EditAdvance", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

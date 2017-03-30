@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUtil", "ConsoleUtil\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonObjectManipulator", "JsonObjectManipulator\JsonObjectManipulator.csproj", "{40F98797-9934-4E65-AD7A-F507B45AFF5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{A18008F6-8767-42B4-A66B-A0CC2E071B2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{40F98797-9934-4E65-AD7A-F507B45AFF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F98797-9934-4E65-AD7A-F507B45AFF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F98797-9934-4E65-AD7A-F507B45AFF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A18008F6-8767-42B4-A66B-A0CC2E071B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18008F6-8767-42B4-A66B-A0CC2E071B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18008F6-8767-42B4-A66B-A0CC2E071B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18008F6-8767-42B4-A66B-A0CC2E071B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

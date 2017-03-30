@@ -61,7 +61,7 @@ namespace DatabaseClassLibrary.Database
             return items;
         }
 
-        public async Task<TEntity> Get(Int32 id)
+        public async Task<TEntity> Get(Int32? id)
         {
             TEntity item = await this.DbSetT.FindAsync(id) as TEntity;
             this.DbSetT.Attach(item);

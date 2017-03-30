@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DataMySqlManager.cs" />
+    <Compile Include="Database\RoleMySqlManager.cs" />
     <Compile Include="Database\UserMySqlManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
